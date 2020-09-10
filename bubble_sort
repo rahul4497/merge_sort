@@ -1,0 +1,21 @@
+# bubble sort
+
+
+def bubble_sort(n):
+
+    swapped = True
+    while swapped:
+        swapped = False
+        for i in range(len(n)-1):
+            if n[i] > n[i+1]:
+                n[i], n[i+1] = n[i+1], n[i]
+                swapped = True
+
+
+length = int(input("Enter the length"))
+number = []
+for i in range(length):
+    num = int(input("Enter the element"))
+    number.append(num)
+bubble_sort(number)
+print(number)
